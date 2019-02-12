@@ -2,7 +2,10 @@
  * @param {number[]} nums
  * @param {number} target
  * @return {number[]}
+<<<<<<< HEAD
  * https://leetcode.com/problems/two-sum/submissions/
+=======
+>>>>>>> 7ebbd446d0c9c6e0536d83742688bc9ad029ae6c
 */
 
 const twoSum = (nums, target) => {
