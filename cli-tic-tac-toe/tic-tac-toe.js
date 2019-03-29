@@ -11,24 +11,24 @@ class Board {
     });
     const [one, two, three, four, five, six, seven, eight, nine] = this.currentPositions;
     this.board = `
-  ${one} |  ${two}  |  ${three}
----------------
-  ${four} |  ${five}  |  ${six}
----------------
-  ${seven} |  ${eight}  |  ${nine}
-`;
+      ${one} |  ${two}  |  ${three}
+    ---------------
+      ${four} |  ${five}  |  ${six}
+    ---------------
+      ${seven} |  ${eight}  |  ${nine}
+    `;
   }
 
   updateBoard(positionToUpdate, type) {
     this.currentPositions[positionToUpdate - 1] = type;
     const [one, two, three, four, five, six, seven, eight, nine] = this.currentPositions;
     this.board = `
-  ${one} |  ${two}  |  ${three}
----------------
-  ${four} |  ${five}  |  ${six}
----------------
-  ${seven} |  ${eight}  |  ${nine}
-`;
+      ${one} |  ${two}  |  ${three}
+    ---------------
+      ${four} |  ${five}  |  ${six}
+    ---------------
+      ${seven} |  ${eight}  |  ${nine}
+    `;
   }
 }
 const board = new Board([null, null, null, null, null, null, null, null, null]);
@@ -46,12 +46,12 @@ process.stdin.on('data', (command) => {
     console.log('representing the square they wish to place their next "X" or "O"');
     console.log('Here are the squares and their corresponding numbers');
     console.log(`
-    1 |  2  |  3
-  ---------------
-    4 |  5  |  6
-  ---------------
-    7 |  8  |  9
-  `);
+      1 |  2  |  3
+    ---------------
+      4 |  5  |  6
+    ---------------
+      7 |  8  |  9
+    `);
   } else {
     if (xTurn) {
       board.updateBoard(parseInt(command, 10), 'X');
