@@ -36,11 +36,11 @@
  */
 
 
-var characterFrequency = function(string) {
+const characterFrequency = (string) => {
   const counter = {};
   for (let i = 0; i < string.length; i += 1) {
     const char = string[i];
-    if (!counter.hasOwnProperty(char)) {
+    if (!Object.keys(counter).includes(char)) {
       counter[char] = 0;
     }
     counter[char] += 1;
@@ -54,7 +54,7 @@ var characterFrequency = function(string) {
       return -1;
     }
     return 0;
-  })
+  });
   const result = [];
   for (let i = 0; i < sortedLetters.length; i += 1) {
     const char = sortedLetters[i];
